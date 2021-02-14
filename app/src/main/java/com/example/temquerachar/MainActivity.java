@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Text
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_TEXT, "O valor da conta dividida foi " + resultado.getText().toString());
+                i.putExtra(Intent.EXTRA_TEXT, R.string.valor_comp + resultado.getText().toString());
                 startActivity(i);
             }
         });
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Text
             @Override
             public void onClick(View v) {
                 if(ttsPlayer != null){
-                    ttsPlayer.speak("O valor por pessoa é de " + resultado.getText().toString(), TextToSpeech.QUEUE_FLUSH, null, "ID1");
+                    ttsPlayer.speak(R.string.valor_pessoa + resultado.getText().toString(), TextToSpeech.QUEUE_FLUSH, null, "ID1");
                 }
             }
         });
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Text
     @Override
     public void onInit(int status) {
         if(status == TextToSpeech.SUCCESS){
-            Toast.makeText(this, "TSS ativado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.tss_ativado, Toast.LENGTH_SHORT).show();
         } else if (status == TextToSpeech.ERROR){
-            Toast.makeText(this, "TSS não ativado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.tss_n_ativado, Toast.LENGTH_SHORT).show();
         }
     }
 }

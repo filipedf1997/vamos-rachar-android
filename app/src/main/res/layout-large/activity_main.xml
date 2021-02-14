@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C27B0"
+    android:background="#009688"
     android:foregroundTint="#AE1010"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="163dp"
-        android:layout_height="58dp"
+        android:layout_width="219dp"
+        android:layout_height="75dp"
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif"
         android:text="@string/vamos"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
@@ -27,47 +27,60 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="166dp"
-        android:layout_height="66dp"
+        android:layout_width="219dp"
+        android:layout_height="82dp"
         android:text="@string/rachar"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="691dp"
+        android:layout_height="308dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/conta" />
+
+    <ImageView
         android:id="@+id/imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toStartOf="@+id/valor"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:srcCompat="@drawable/ic_baseline_attach_money_24" />
 
     <EditText
         android:id="@+id/valor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_width="264dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="72dp"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/valor"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toStartOf="@+id/pessoas"
         app:layout_constraintHorizontal_bias="0.5"
@@ -77,15 +90,17 @@
 
     <EditText
         android:id="@+id/pessoas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_width="317dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/quantidade_de_pessoas"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -95,10 +110,10 @@
         android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:text="R$ 0.00"
         android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,9 +121,9 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnComp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#FFFFFF"
         android:clickable="true"
         android:tint="#9C27B0"
@@ -118,13 +133,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resultado"
         app:rippleColor="#9C27B0"
-        app:srcCompat="?attr/actionModeShareDrawable" />
+        app:srcCompat="@drawable/ic_action_name_share"
+        app:useCompatPadding="false" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnFala"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#FFFFFF"
         android:clickable="true"
         android:tint="#9C27B0"
@@ -134,6 +150,6 @@
         app:layout_constraintStart_toEndOf="@+id/btnComp"
         app:layout_constraintTop_toBottomOf="@+id/resultado"
         app:rippleColor="#9C27B0"
-        app:srcCompat="@drawable/ic_baseline_volume_up_24" />
+        app:srcCompat="@drawable/ic_action_name_volume" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

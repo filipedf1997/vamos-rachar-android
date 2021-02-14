@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Let\'s split!</string>
+    <string name="vamos">Let\'s</string>
+    <string name="rachar">Split!</string>
+    <string name="valor">Amount</string>
+    <string name="quantidade_de_pessoas">Amount of people</string>
+    <string name="tss_ativado">TSS enabled</string>
+    <string name="tss_n_ativado">TSS not enabled</string>
+    <string name="valor_pessoa">The amount per person is </string>
+    <string name="valor_comp">The amount of the divided bill was </string>
+</resources>
